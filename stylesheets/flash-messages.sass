@@ -1,0 +1,53 @@
+=message
+  background-repeat: no-repeat
+  background-position: 10px center
+  border: 1px solid
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 13px
+  margin: 10px 0
+  padding: 15px 10px 15px 50px
+  
+=success
+  +message
+  color: #4F8A10
+  background-color: #DFF2BF
+  background-image: image-url( 'success.png' )
+  
+=info
+  +message
+  color: #00529B
+  background-color: #BDE5F8
+  background-image: image-url( 'info.png' )
+
+=warning
+  +message
+  color: #9F6000
+  background-color: #FEEFB3
+  background-image: image-url( 'warning.png' )
+
+=error
+  +message
+  color: #D8000C
+  background-color: #FFBABA
+  background-image: image-url( 'error.png' )
+
+=validation
+  +message
+  color: #D63301
+  background-color: #FFCCBA
+  background-image: url( 'validation.png' )
+ 
+.success
+  +success
+  
+.info
+  +info
+
+.warning
+  +warning
+
+.error
+  +error
+  
+.validation
+  +validation
