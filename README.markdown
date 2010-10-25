@@ -4,29 +4,31 @@ A simple [Compass](http://compass-style.org/) extension that provides easy and a
 
 ## Installation
 
-Now:
+### Now
 
 1. Download the tagged archive
 1. Extract the archive's content to `<compass_project_root>/extensions/flash-messages`
 1. Navigate to your Compass project root
-1. Install.
+1. Install
 
         $ compass install flash-messages
 
-You should see something like this:
+    You should see something like this:
 
-    exists sass
-    exists ../img
-    create ../img/success.png
-    create ../img/info.png
-    create ../img/warning.png
-    create ../img/error.png
-    create ../img/validation.png
-    exists ../css
+        exists sass
+        exists ../img
+        create ../img/success.png
+        create ../img/info.png
+        create ../img/warning.png
+        create ../img/error.png
+        create ../img/validation.png
+        exists ../css
 
 The paths may vary and you'll see additional output, but the gist is that five (5) images were installed in the images directory configured in the `images_dir` value of your `config.rb` file.
 
-A gem-based install will be provided soon.
+### Soon
+
+A gem-based install.
 
 ## Usage
 
