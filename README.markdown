@@ -9,7 +9,7 @@ A simple [Compass](http://compass-style.org/) extension that provides easy and a
 1. Download the tagged archive
 1. Extract the archive's content to `<compass_project_root>/extensions/flash-messages`
 1. Navigate to your Compass project root
-1. Install
+1. Install the extension
 
         $ compass install flash-messages
 
@@ -32,41 +32,42 @@ A gem-based install.
 
 ## Usage
 
-The extension includes both default classes and mixins. If you're okay with using the default classes--they're semantic--you can just do this:
+### The Stylesheet
 
-    ... existing layout/page content ...
+    // Import the extension
+    @import flash-messages
     
+    // Uncomment the mixin below if you're comfortable with the default class names:
+    //   .success, .info, .warning, .error, .validation
+    // +flash-message-classes
+		
+    // If you'd rather do your own thing, just include the appropriate
+    // message mixin. For example:
+    //   body #my-success-message
+    //     +success
+    //   body #my-error-message
+    //     +error
+
+### The Markup
+
+    <!--
+      If you're comfortable with the default class names and have included
+      the flash-message-classes mixin
+     -->
     <div class="(success|info|warning|error|validation)">
       This is an important (success|info|warning|error|validation) message your users need to see
     </div>
     
-    ... existing layout/page content ...
-		
-If you desperately want or need to use non-standard class names, you can just throw the mixins at the appropriate class name and decorate the mixin's style block with whatever you'd like:
-
-    /** In your custom style sheet */
-    @import flash-messages
-    
-    .my-custom-success-style
-      +success
-      // additional styling as desired
-    
-    #my-custom-error-block
-      +error
-      // additional styling as desired
-    
-    <!-- In your markup -->
-    ... existing layout/page content ...
-    
-    <div class="my-custom-success-style">
-      Your flash message success content here
-    </div>
-    
-    <div id="my-custom-error-block">
-      Your flash message error content here
+    <!--
+      If you're doing your own thing, using the example SASS shown above
+     -->
+    <div id="my-success-message">
+      This is an important success message your users need to see
     </div>
 		
-    ... existing layout/page content ...
+    <div id="my-error-message">
+      This is an important error message your users need to see
+    </div>
 
 ## Credits & Screenshots
 
