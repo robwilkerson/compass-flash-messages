@@ -1,0 +1,71 @@
+@mixin message {
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  border: 1px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin: 10px 0;
+  padding: 15px 10px 15px 50px;
+}
+  
+@mixin success {
+  @include message;
+  
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image: image-url( 'success.png' );
+}
+  
+@mixin info {
+  @include message;
+  
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: image-url( 'info.png' );
+}
+
+@mixin warning {
+  @include message;
+  
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: image-url( 'warning.png' );
+}
+
+@mixin error {
+  @include message;
+  
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: image-url( 'error.png' );
+}
+
+@mixin validation {
+  @include message;
+  
+  color: #D63301;
+  background-color: #FFCCBA;
+  background-image: image-url( 'validation.png' );
+}
+
+@mixin flash-message-classes {
+  .success {
+    @include success;
+  }
+    
+  .info {
+    @include info;
+  }
+  
+  .warning {
+    @include warning;
+  }
+  
+  .error {
+    @include error;
+  }
+    
+  .validation {
+    @include validation;
+  }
+}
